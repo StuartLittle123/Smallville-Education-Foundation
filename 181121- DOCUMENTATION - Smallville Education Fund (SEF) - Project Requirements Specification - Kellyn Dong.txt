@@ -451,4 +451,9 @@ Req#
 Smallville Education Foundation (SEF) - Requirements        November 21, 2018        Page  of
 
 Setup Users and Profiles
-Created new Contact field: System ID
+Created the following new fields:
+	Contact: System ID
+	Account: Family ID
+	Affiliation: Grade
+	Affiliation: Enrollment Status
+	
