@@ -1,0 +1,451 @@
+﻿Smallville Education Foundation (SEF) - Requirements Specification
+Smallville Education Foundation (SEF) Requirements Specification
+Version 3.0
+November 21, 2018
+
+
+Smallville Education Foundation (SEF) helps the Smallville School District (SSD) sustain and enhance an exceptional public education for all K-8th graders SEF has hired CRM Brulee Partners (“CRM Brulee”)  to execute its Salesforce implementation, replacing the Donor Perfect CRM that it’s been using since 1999.
+
+
+A few highlights of what SEF wil be able to accomplish through Salesforce include:
+* donation documentation, tracking, and reporting
+* fundraising events documentation, tracking, and reporting
+* contact and donor documentation, tracking, and reporting
+* email templates
+* grants documentation, tracking, and reporting (a future feature that is not part of the current project scope)
+* individualized security access based on staff position (hierarchy) Stay on top of networking and job search activities through tracking deadlines, email reminders, and to-dos (task list)
+
+
+As a 501(c)(3) nonprofit profit corporation, SEF was recently granted 10 free user licenses by Salesforce.org, allowing it to increase the number of SEF staff members involved in fundraising at all five of SSD’s schools.
+
+
+This document contains requirements that CRM Brulee identified after a series of discovery meetings with SEF’s VP of Development and SSD’s team of Site Directors (SDs). 
+
+
+The deadline for this project is Thursday, November 29, 2018. On that day, CRM Brulee Partners will deliver a formal presentation of SEF’s new Salesforce org.
+________________
+
+
+
+
+Table of Contents
+
+
+1.        EXECUTIVE SUMMARY        
+1.1        Project Overview        
+1.2        Purpose and Scope of this Specification        
+2.        REQUIREMENTS        
+3.        FUNCTIONAL REQUIREMENTS        
+3.1        Requirements for  People        
+3.2        Requirements for Informational Interview        
+3.3        Requirements for Target Companies (Potential Employers)        
+3.4        Requirements for Job Applications (Positions Applied For)        
+________________
+
+
+
+
+1. Executive Summary
+   1. Project Overview
+CRM Brulee will complete the SEF Salesforce implementation from 11/19/18 - 11/29/18, the last two weeks of November. This is the optimal time to execute this project becuase of the Thanksgiving holiday. The SEF staff will be on holiday from its general fundraising responsibilities.
+This implementation will include installation of the Non Profit Success Pack (NPSP) and activation of the 10 free user licenses supplied by Salesforce.org (formerly, the Salesforce Foundation). This represents a an annual savings of $6,000 for SEF.
+All present functionality using the current Donor Perfect CRM will be preserved in the new SEF Salesforce org with the added benefit of more advanced features.
+SEF’s VP of Development and the school Site Directors will be the primary end users. 
+   1. Purpose and Scope of this Document
+The purpose and scope of this document is to provide detailed requirements for implementing and customizing SEF’s Salesforce org according to needs identified by the VP of Development, each of the school Site Directors, and CRM Brulee.
+________________
+
+
+1. Requirements
+The SEF President and VP of Development must have access to standard Salesforce and NPSP objects in order to track funding. These standard objects include:
+* Accounts
+   * households: current households who are affiliated with a “home school” and past households that no longer are affiliated with a “home school”
+   * businesses: that donate to SEF, sometimes through matching donations. Includes corporations and other nonprofits
+   * foundations: nonprofit entities that fund other nonprofits
+   * Levels: indentify Scholar’s Circle Giving Levels
+      * assigns donors to “giving levels” based on their yearly donation
+   * Activities (Tasks and Events): 
+      * New Task
+      * New Event (to calendar meetings)
+      * Log a Call
+      * Email
+   * Reports 
+      * # of families who have donated (grouped by Scholar’s Circle Giving Level) vs. total # of families
+      * families who have NOT yet donated at same level as previous year
+      * # of families at each Giving Level
+* Contacts 
+   * any student or family member who has a “home school”
+   * extended family members
+   * school alumni
+   * community members outside of SSD but who donate to SEF
+   * foundation members
+   * Affiliations list view link Contacts to Accounts
+   * Relationships list view link Contacts to other Contacts
+* Opportunities (donations) made via the following payment types:
+   * check
+   * cash
+   * credit card
+   * stock donations
+   * trust donations
+   * matching donations from employers
+   * in-kind donations
+* Campaigns
+   * fundrasing events
+   * email campaign blasts
+   * Campaign Members can import Leads and/or Contacts
+   * campaign member tracking
+
+
+In a role hierarchy, the SEF school Site Directors (SDs) will fall below the President and VP of Development. For privacy reasons, SDs will only have access to donor data related to their appointed schools. However, in cases where families (households) have students in two or more SSD schools, the SDs will have access to those schools beyond their appointed school.
+1. Functional Requirements
+The President and VP of Development must be able to track data related to each of these objects in the system. In general, each Site Director must be able to track data related to each of these objects in his or her affiliated school.
+   1. Requirements for Accounts
+Req#
+	Requirement
+	Comments
+	Priority
+	BB_ACT_001
+	President and VP of Development will be able to track all Accounts. Example: track a family - including all adult household members and students (and students’ schools and grades)
+	
+
+	1
+	BB_ACT_002
+	SDs will be able to track Accounts in his / her appointed school  
+	
+
+	1
+	BB_ACT_003
+	Scholar’s Circle Y/N picklist (controlling) and Giving Level picklist (dependent) follow up with the contact should be sent within 24 hours (via email).
+	Identifies whether the account is a member of the Scholar’s Circle, and if so, identifies at which Giving Level 
+	1
+	BB_ACT_004
+	FamilyID custom field
+	A unique external ID provided the Smallville School District 
+	1
+	BB_ACT__005
+	The President and VP of Development want a dahsboard to display the following components:
+* # of families who have donated (grouped by Scholar’s Circle Giving Level) across all schools
+* Families who have NOT yet donated at the same level as the previous year across all schools 
+* Total donations raised across all schools
+* # of families (households) across all schools
+* # of families at Giving Levels
+	
+
+	1
+	BB_ACT__006
+	The President, VP of Development, and each SD wants a dashboard to display the following components:
+* Total donations raised at his / her school
+* # of families (households) at his / her school
+* # of families at Giving Levels at his / her school
+	
+
+	1
+	BB_ACT__006
+	The SD wants to see the following donation summary reports for his / her appointed school:
+* YTD (based on the current school year) Donation
+* READ YTD
+* FAN YTD
+* TYD without Matching donations
+	
+
+	1
+	   1. Requirements for Contacts
+Req#
+	Requirement
+	Comments
+	Priority
+	BB_CON_001
+	The President and VP of Development will be able to track all Contacts in the system, including their Affiliations and Relationships, in the system and be able to create new Contacts, Affiliations, and Relationships
+	A Contact is any of the following: student, parent/guardian, sibling, extended family member, alumna or alumnus, community member, foundation member, business contact.
+	1
+
+
+	BB_CON_002
+	Each SD will be able to track Contacts in his / her appointed school with the exception of sibling Contacts. In cases where there are sibling Contacts, the SD will be able to view only those related Contacts and Household Accounts at the other school(s). 
+	
+
+	1
+	BB_C)N_003
+	Other ways to track Contacts include:
+* Donor (contacts) conversations (Tasks)
+* Calls to donors (Contacts) (Log a Call)
+* Emails to / responses from donors (bcc Salesforce)
+	
+
+	1
+	BB_CON_004
+	Graduation Year Field / Class of
+	If Contact is a student, lists the 8th grade graduation year
+	1
+	BB_CON_005
+	Affiliation Related List
+	Lists all the affiliated Accounts, past and present, related to the Contact
+	1
+	BB_CON_006
+	Relationship Related List
+	Lists relationships between Contacts, e.g. student to a grandmother, parent/guardian to a company
+	1
+	BB_CON_007
+	SSD SystemID custom field
+	A unique external ID provided the Smallville School District 
+	1
+	BB_CON_008
+	Relationships tab and list view. Relationships between Contacts must be trackable in the system
+	
+
+	1
+	BB_CON_009
+	Affiliations tab and list view. Affiliations between Contacts and Accounts must be trackable in the system
+	
+
+	1
+	
+
+	
+
+	
+
+	
+
+	________________
+   1. Requirements for Affiliations
+Req#
+	Requirement
+	Comments
+	Priority
+	BB_AFF_001
+	Entry Date custom field
+	This is the date the Affiliation record was created for this Contact. It does not necessarily equate to the date the Contact actually started at the affiliation, e.g. Entry Date = 10/18/2018 with Google, Inc., but Contact started working there prior to this date.
+	1
+	BB_AFF_002
+	Exit Date custom field 
+	This is the date the Contact will exit from the Affiliation record, e.g. graduation date 
+Outcomes should include: new contact, job lead, educational learning, etc.)
+	1
+	BB_AFF_003
+	Grade
+	Current grade of student
+	1
+	BB_AFF_004
+	Graduation Year
+	This is the year the student will graduate
+	2
+	
+
+	
+
+	
+
+	
+
+	
+
+   1. Requirements for Opportunities 
+Req#
+	Requirement
+	Comments
+	Priority
+	BB_OPP_001
+	The President and VP of Development will be able to track all Opportunities (donations) in the system
+	
+
+	1
+
+
+	BB_OPP_002
+	Each SD will be able to track Opportunities in his / her appointed school 
+	
+
+	1
+	BB_OPP_003
+	Date of Donation custom field 
+	
+
+	
+
+	BB_OPP_004
+	Type of Donation custom field::
+* Check
+* Cash
+* Credit Card
+* Stock Donation
+* Trust Donation
+* Matching donation from Employer
+	
+
+	1
+	BB_OPP_005
+	Reference / Check Number custom field 
+	text field
+	1
+	BB_OPP_006
+	Anonymous? custom field
+	checkbox
+	1
+	BB_OPP_007
+	Scholar’s Circle - Giving Levels picklist field:
+* Innovator: $20k and above
+* Trustee: $15k - $19,999
+* Superintendent: $10k - $14,999
+* Assistant Superintendent: $7,500 - $9,999
+* Principal: $5k to $7,499
+* Scholar: $2,500 - $4,999
+	If an Amount is entered that is $2,500 or above, a Process Builder workflow trigger the corresponding Scholar’s Circle picklist value to be selected 
+	2
+	BB_OPP_008
+	Campaign Lookup Relationship custom field: Campaign Name
+	
+
+	1
+	
+
+	
+
+	
+
+	
+
+	   1. Requirements for Campaigns 
+Req#
+	Requirement
+	Comments
+	Priority
+	BB_CAM_001
+	The President and VP of Development must be able to track all Campaigns:
+* Annual Campaign
+* Read-a-Thon (READ)
+* Dinner Dance and Auction
+* Fund-a-Need (FAN)
+	
+
+	1
+
+
+	BB_CAM_002
+	Each SD must be able to track Campaigns and Campaign Members as they relate to his / her appointed school
+	
+
+	1
+	
+
+   1. Requirements for Email Templates
+BB_EMA_001
+	Thank you templates
+	In addition the donor would like to see the home school and a count of students at each school.
+	1
+	BB_EMA_002
+	Outreach templates
+	
+
+	2
+	BB_EMA_003
+	Event invitation tempaltes
+	
+
+	3
+	
+
+   1. Requirements for Users
+BB_USE_001
+	The President, VP of Development and each School Director must be defined as separate users in the system. 
+	
+
+	1
+	BB_USE_002
+	The President will be at the top of the role hierarchy
+	
+
+	1
+	BB_USE_003
+	The VP of Development will be below the President in the role hierarchy and be the system administrator for this system
+	
+
+	
+
+	BB_USE_004
+	Each SD will be below the VP of Development
+	
+
+	
+
+	
+
+   1. Requirements for Company
+BB_COM_001
+	SEF tracks donations for the school year, not calendar year: July 1, (year) - June 30, (year)
+	Fiscal Year Start Month: July 
+Fiscal Year is Based On: The starting month
+	1
+	
+
+________________
+
+
+   1. Site Director Permissions
+
+
+Req#
+	Object
+	Accessibility to records others own
+	OWD (Private, Public Read Only, Public Read/Write) 
+	Profile
+	Folder
+	
+
+	Account
+	NOT view or create unless shared
+	Private
+	
+
+	
+
+	
+
+	Contact
+	NOT view or create unless shared
+	Private
+	
+
+	
+
+	
+
+	Opportunity
+	view but NOT create or edit
+	Public Read Only
+	
+
+	
+
+	
+
+	Campaign
+	view but NOT create or edit
+	Public Read Only
+	
+
+	
+
+	
+
+	Reports
+	
+
+	
+
+	
+
+	Read Access to folder
+	
+
+	Dashboards
+	
+
+	
+
+	
+
+	Read Access to folder 
+	
+
+Smallville Education Foundation (SEF) - Requirements        November 21, 2018        Page  of
