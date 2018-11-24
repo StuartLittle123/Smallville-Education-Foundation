@@ -7,6 +7,11 @@ Created the following new fields:
 	Affiliation: Enrollment Status
 	
 Imported Data: Kellyn's Copy of Sample School Dta.xlsx
+	Imported:	Student Contacts
+			Parent Contacts
+			Affiliations
+181124:
 
-P
+
+
 	
