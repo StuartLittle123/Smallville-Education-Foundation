@@ -1,0 +1,12 @@
+
+Setup Users and Profiles
+Created the following new fields:
+	Contact: System ID
+	Account: Family ID
+	Affiliation: Grade
+	Affiliation: Enrollment Status
+	
+Imported Data: Kellyn's Copy of Sample School Dta.xlsx
+
+P
+	
