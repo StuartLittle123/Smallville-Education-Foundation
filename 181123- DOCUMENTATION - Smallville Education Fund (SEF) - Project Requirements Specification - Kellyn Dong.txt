@@ -1,16 +1,50 @@
 
 Setup Users and Profiles
+Fiscal Year: July 1, (year) - June 30, (year)
 Created the following new fields:
 	Contact: System ID
 	Account: Family ID
 	Affiliation: Grade
 	Affiliation: Enrollment Status
+Modified the following existing fields:
+	Campaign: Type: Added:	Auction
+				READ
+				FAN
+				Annual
 	
-Imported Data: Kellyn's Copy of Sample School Dta.xlsx
-	Imported:	Student Contacts
-			Parent Contacts
-			Affiliations
+Imported Data with Data Import Wizard: Kellyn's Copy of Sample School Dta.xlsx
+	Imported:			Student Contacts
+					Parent Contacts
+			
 181124:
+Imported Data with Data Loader: 	Affiliations
+Campaign: Created:	Annual
+			READ
+			FAN
+			Auction
+	Edited list views:	Annual
+				READ
+				FAN
+				Auction
+Opportunity: Added to Type of Donation field:
+	Removed from page layout: 	Type
+					Lead Source
+Process Builder: Scholar's Circle Giving Levels: 
+
+181125:
+Household Accounts: Changed Ownership to respective SDs
+Sharing Settings: OWD: 	Account, Contract and Asset:	Public Read Only
+			Contact:	Controlled by Parent
+			Opportunity:	Private
+			Campaign:	Public Read/Write
+			Activity:	Controlled by Parent
+			Calendar: 	Show Details and Add Events
+			Household:	Public Read Only
+			Recurring Donations: Private
+			Manual User Record Sharing:	check
+			Manager Groups:	check
+			
+			
 
 
 
