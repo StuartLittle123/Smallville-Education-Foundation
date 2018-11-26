@@ -16,6 +16,9 @@ Removed the following existing fields from page layout:
 			Ticker Symbol
 			SiC Code
 			SLA Expectation Date
+Added the following related lists to Contact page layout:
+	Relationships
+	Organizational Affiliations
 	
 Imported Data with Data Import Wizard: Kellyn's Copy of Sample School Dta.xlsx
 	Imported:			Student Contacts
