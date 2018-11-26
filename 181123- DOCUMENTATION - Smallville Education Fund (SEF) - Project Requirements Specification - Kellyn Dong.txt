@@ -44,6 +44,8 @@ Sharing Settings: OWD: 	Account, Contract and Asset:	Public Read Only
 			Manual User Record Sharing:	check
 			Manager Groups:	check
 			
+Lightning For Gmail And Lightning Sync: installed BUT did NOT 1) Register Google with Salesforce, 2) Prepare your G Suite account 3) Test your connection			
+			
 			
 
 
