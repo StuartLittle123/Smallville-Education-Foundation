@@ -11,6 +11,11 @@ Modified the following existing fields:
 				READ
 				FAN
 				Annual
+Removed the following existing fields from page layout:
+	Account:	FAX
+			Ticker Symbol
+			SiC Code
+			SLA Expectation Date
 	
 Imported Data with Data Import Wizard: Kellyn's Copy of Sample School Dta.xlsx
 	Imported:			Student Contacts
