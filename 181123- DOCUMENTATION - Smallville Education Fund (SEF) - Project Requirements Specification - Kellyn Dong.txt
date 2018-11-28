@@ -57,6 +57,10 @@ Lightning For Gmail And Lightning Sync: installed BUT did NOT 1) Register Google
 Process Builder: Scholar's Circle Giving Levels: 	Completed workflows
 							Activated
 							Tested. End Date NOT working.
+181127:	Created and activated Levels
+
+							
+							
 			
 			
 
