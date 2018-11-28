@@ -59,6 +59,12 @@ Process Builder: Scholar's Circle Giving Levels: 	Completed workflows
 							Tested. End Date NOT working.
 181127:	Created and activated Levels
 
+Created Report:	2018 Campaigns with Opportunities
+	"On the donor, the SD would like to see the following donation sumary information (dollar amounts):
+	- YTD (based on the current school year) donation
+	- READ YTD
+	- FAN YTD
+	- YTD without Matching
 							
 							
 			
